@@ -16,7 +16,6 @@
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion compile_sdk_version
@@ -46,6 +45,11 @@ android {
             signingConfig signingConfigs.release
         }
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+    namespace 'me.toptas.fancyshowcasesample'
 }
 
 dependencies {
